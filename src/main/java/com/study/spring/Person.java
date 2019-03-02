@@ -12,7 +12,6 @@ import java.io.Serializable;
 
 @Setter
 @Getter
-@Component
 public class Person implements Serializable{
 
     private static final long serialVersionUID = -4328818995465808287L;
