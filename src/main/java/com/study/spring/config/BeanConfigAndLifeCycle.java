@@ -3,10 +3,15 @@ package com.study.spring.config;
 import com.study.spring.bean.Cat;
 import com.study.spring.bean.Dog;
 import com.study.spring.bean.Pet;
+import com.study.spring.bean.Sheep;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("classpath:pet.properties")
+//@ImportResource("classpath:applicationContext.xml")
 public class BeanConfigAndLifeCycle {
 
     /**
@@ -38,5 +43,10 @@ public class BeanConfigAndLifeCycle {
     //@Bean
     public Cat cat() {
         return new Cat();
+    }
+
+    @Bean
+    public Sheep sheep() {
+        return new Sheep();
     }
 }
